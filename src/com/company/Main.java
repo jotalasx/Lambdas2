@@ -63,14 +63,20 @@ public class Main {
         System.out.println(collect);
         System.out.println(count);
 
-        names.stream()
+        /*names.stream()
                 .filter((n) -> n.contains(SILABA))
-                .forEach(n -> System.out.println(n));
+                .forEach(n -> System.out.println(n));*/
 
         names.stream()
                 .filter((n) -> n.contains(SILABA))
                 .map(ob -> new StringBuilder(ob))
                 .collect(Collectors.toList());
+
+        names.stream()
+                .filter((n) -> n.contains(SILABA))
+                .forEach(System.out::println);
+
+
 
 
     }
