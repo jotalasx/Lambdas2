@@ -67,9 +67,10 @@ public class Main {
                 .filter((n) -> n.contains(SILABA))
                 .forEach(n -> System.out.println(n));
 
-
-
-
+        names.stream()
+                .filter((n) -> n.contains(SILABA))
+                .map(ob -> new StringBuilder(ob))
+                .collect(Collectors.toList());
 
 
     }
