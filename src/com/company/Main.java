@@ -1,5 +1,7 @@
 package com.company;
 
+import com.company.generic.GenericClass;
+import com.company.generic.StandardClass;
 import com.company.inter.interClass;
 
 import java.util.ArrayList;
@@ -63,9 +65,9 @@ public class Main {
         System.out.println(collect);
         System.out.println(count);
 
-        /*names.stream()
+        names.stream()
                 .filter((n) -> n.contains(SILABA))
-                .forEach(n -> System.out.println(n));*/
+                .forEach(n -> System.out.println(n));
 
         names.stream()
                 .filter((n) -> n.contains(SILABA))
@@ -75,6 +77,13 @@ public class Main {
         names.stream()
                 .filter((n) -> n.contains(SILABA))
                 .forEach(System.out::println);
+
+        //**************************************
+
+        StandardClass sc = new StandardClass();
+        GenericClass<String> gc = new GenericClass<>();
+
+
 
 
 
